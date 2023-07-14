@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!-- 写法一 -->
+  <style>
+
+    .p {
+      color: blue;
+    }
+
+    .p:after{
+      content: '12345ty' !important;
+    }
+
+    .p:hover {
+      color: red;
+      cursor: pointer;
+    }
+
+
+
+    /* import 需要写在style里面，并且写在style的顶部 */
+    /* div p {
+      color: yellow;
+    }
+
+    div>p {
+      color: yellow;
+    } */
+  </style>
+
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body>
+  <!-- <div class="out">外部标签</div> -->
+  <p class="p" >哈哈哈</p>
+  <!-- <div id="id-test">id选择器</div> -->
+  <div>
+    <p>第一层</p>
+    <span>
+      <p>第二层</p>
+    </span>
+  </div>
+
+  <div>
+    <p>兄弟3</p>
+    <h1>我是h1</h1>
+    <p>兄弟1</p>
+    <p>兄弟2</p>
+  </div>
+</body>
+
+</html>
