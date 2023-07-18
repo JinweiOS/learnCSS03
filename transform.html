@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .block {
+      width: 200px;
+      height: 100px;
+      background-color: green;
+    }
+
+    .test {
+      background-color: red;
+      transform: translate(100px, 100px) rotate(45deg) scale(0.5, 0.5);
+    }
+
+    .first {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      transition-property: transform width;
+      transition-duration: 5s;
+      transition-timing-function: ease-in-out;
+    }
+
+    .first:hover {
+      width: 400px;
+      box-shadow: 0px 16px 48px 16px rgba(0, 0, 0, .08), 0px 12px 32px rgba(0, 0, 0, .12), 0px 8px 16px -8px rgba(0, 0, 0, .16);
+      cursor: pointer;
+      transform: translate(0px, -20px);
+    }
+
+    /** 左闭右开区间生效 min-width =< 生效 < max-width */
+    @media screen and (max-width: 500px) and (orientation: portrait) {
+      .second {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    @media screen and (min-width: 500px) and (max-width: 800px) {
+      .second {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media screen and (min-width: 800px) {
+      .second {
+        width: 220px;
+        height: 220px;
+      }
+    }
+
+    .second {
+      border-radius: 100px;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-name: circle;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes circle {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="block test"></div>
+  <div class="block"></div>
+  <img class="first" src="http://p1.music.126.net/51t-df3CYVcpAyv24NYkYg==/109951167736593044.jpg" />
+  <img class="second" src="http://p1.music.126.net/51t-df3CYVcpAyv24NYkYg==/109951167736593044.jpg" />
+</body>
+
+</html>
